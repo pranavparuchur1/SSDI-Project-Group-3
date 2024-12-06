@@ -56,7 +56,7 @@ const useSortTasks = (tasks: Task[]) => {
     const sortByPriority = () => {
       const tasksCopy = [...tasks];
       const sorted = tasksCopy.sort((task1, task2) => {
-        return task2.priority.charCodeAt(task2.priority.length - 1) - task1.priority.charCodeAt(task1.priority.length - 1);
+        return task2?.priority?.charCodeAt(task2.priority.length - 1) - task1?.priority?.charCodeAt(task1.priority.length - 1);
       });
       console.log(sorted);
       return sorted;
